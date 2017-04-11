@@ -29,6 +29,8 @@ defmodule Watchnature.Mixfile do
                     :ueberauth_identity,
                     :comeonin,
                     :corsica,
+                    :absinthe,
+                    :absinthe_plug,
                     :postgrex]]
   end
 
@@ -54,6 +56,8 @@ defmodule Watchnature.Mixfile do
      {:guardian, "~> 0.10"},
      {:bodyguard, "~> 0.6.1"},
      {:geo, "~> 1.4"},
+     {:absinthe, "~> 1.2.0"},
+     {:absinthe_plug, "~> 1.2.3"},
      {:cowboy, "~> 1.0"}]
   end
 

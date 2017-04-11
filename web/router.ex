@@ -37,4 +37,7 @@ defmodule Watchnature.Router do
 
     post "/identity/callback", AuthController, :indentity_callback
   end
+
+  forward "/graph", Absinthe.Plug,
+    schema: Watchnature.Web.Schema
 end
