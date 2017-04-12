@@ -6,7 +6,8 @@ defmodule Watchnature.Web.UserResolver do
   end
 
   def find(%{id: id}, _info) do
-    case Repo.get(User, id) do
+    user = Repo.get(User, id) |> Repo.preload(:posts)
+    case user do
       nil -> {:error, "User id #{id} not found"}
       user -> {:ok, user}
     end
