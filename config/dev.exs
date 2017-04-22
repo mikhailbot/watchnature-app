@@ -14,7 +14,6 @@ config :watchnature, Watchnature.Endpoint,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
                     cd: Path.expand("../", __DIR__)]]
 
-
 # Watch static and templates for browser reloading.
 config :watchnature, Watchnature.Endpoint,
   live_reload: [
@@ -43,3 +42,8 @@ config :watchnature, Watchnature.Repo,
   port:     System.get_env("POSTGRES_PORT") || "32770",
   types: Watchnature.PostgresTypes,
   pool_size: 10
+
+config :cloudex,
+  api_key: System.get_env("CLOUDEX_API_KEY"),
+  secret: System.get_env("CLOUDEX_SECRET"),
+  cloud_name: System.get_env("CLOUDEX_CLOUD_NAME")

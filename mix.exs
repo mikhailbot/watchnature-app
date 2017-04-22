@@ -23,6 +23,7 @@ defmodule Watchnature.Mixfile do
                     :phoenix_html,
                     :cowboy,
                     :logger,
+                    :cloudex,
                     :gettext,
                     :phoenix_ecto,
                     :ueberauth,
@@ -55,6 +56,7 @@ defmodule Watchnature.Mixfile do
      {:guardian, "~> 0.10"},
      {:bodyguard, "~> 1.0.0"},
      {:geo, "~> 1.4"},
+     {:cloudex, "~> 0.1.10"},
      {:cowboy, "~> 1.0"}]
   end
 
