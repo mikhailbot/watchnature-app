@@ -39,11 +39,6 @@ config :watchnature, Watchnature.Repo,
   username: System.get_env("POSTGRES_USER") || "postgres",
   password: System.get_env("POSTGRES_PASSWORD") || "postgres",
   hostname: System.get_env("POSTGRES_HOST") || "localhost",
-  port:     System.get_env("POSTGRES_PORT") || "32770",
+  port:     System.get_env("POSTGRES_PORT") || "5432",
   types: Watchnature.PostgresTypes,
   pool_size: 10
-
-config :cloudex,
-  api_key: System.get_env("CLOUDEX_API_KEY"),
-  secret: System.get_env("CLOUDEX_SECRET"),
-  cloud_name: System.get_env("CLOUDEX_CLOUD_NAME")
