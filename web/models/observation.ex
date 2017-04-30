@@ -9,6 +9,8 @@ defmodule Watchnature.Observation do
     belongs_to :user, Watchnature.User
     belongs_to :post, Watchnature.Post
 
+    has_many  :images, Watchnature.ObservationImage
+
     timestamps()
   end
 

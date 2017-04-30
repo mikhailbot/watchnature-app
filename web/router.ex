@@ -31,7 +31,9 @@ defmodule Watchnature.Router do
     resources "/users", UserController, except: [:new, :edit]
 
     resources "/posts", PostController, except: [:new, :edit] do
-      resources "/observations", ObservationController, except: [:new, :edit]
+      resources "/observations", ObservationController, except: [:new, :edit] do
+        resources "/images", ObservationImageController, only: [:create, :destroy]
+      end
       resources "/comments", CommentController, except: [:new, :edit]
     end
   end
