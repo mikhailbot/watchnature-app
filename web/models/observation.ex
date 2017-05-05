@@ -25,6 +25,10 @@ defmodule Watchnature.Observation do
     |> validate_required([:description, :user_id, :post_id])
   end
 
+  def get_images(observation) do
+    assoc(observation, :images)
+  end
+
   # If location map is empty (nothing sent by client) then remove
   # that map from the params altogether as Geo will throw when it
   # tries to parse an empty coordinates array
