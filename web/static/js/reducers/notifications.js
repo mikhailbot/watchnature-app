@@ -2,12 +2,12 @@ import * as types from '../constants/action-types'
 
 const initialState = {
   all: [
-    {
-      id: 'notification-1',
-      type: 'info',
-      message: 'Signed in successfully',
-      dismissAfter: 3000
-    }
+    // {
+    //   id: 'notification-1',
+    //   type: 'info',
+    //   message: 'Signed in successfully',
+    //   dismissAfter: 3000
+    // }
   ]
 }
 
